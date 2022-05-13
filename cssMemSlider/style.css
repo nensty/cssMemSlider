@@ -1,106 +1,118 @@
 html {
-    font-size: 10px;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+  font-size: 10px;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #2c2c2c;
 }
 
 .slider {
-    margin: 2rem;
-    overflow: hidden;
+  margin: 5rem;
+  overflow: hidden;
 }
 
 .slider__picture {
-    width: 400%;
-    overflow: hidden;
-    display: flex;
+  width: 400%;
+  overflow: hidden;
+  display: flex;
 }
 
 .slide {
-    width: 25%;
-    transition: all .6s ease;
+  width: 25%;
+  transition: all .6s ease;
 }
 
 img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .slider__navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .slider__descriptions {
-    display: flex;
-    flex-flow: column;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
 }
 
 .slider__description {
-    width: 80%;
-    font-size: 2.4rem;
-    color: white;
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  opacity: 0;
 }
 
 .slider__controls {
-    display: flex;
-    align-items: center;
+  margin: unset;
+  display: flex;
+  align-items: center;
 }
 
 .slider__control {
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
-    margin: 0.5rem;
-    background-color: rgb(90, 101, 168);
-    border-radius: 1rem;
-    transition: all .4s ease;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  background-color: rgb(90, 101, 168);
+  border-radius: 1rem;
+  transition: all .4s ease;
 }
 
 .slider__control:hover {
-    background-color: rgb(241, 241, 241, 0.9);
+  background-color: rgb(241, 241, 241, 0.9);
 }
 
 input[name="images"] {
-    display: none;
+  display: none;
 }
 
-#i1:checked ~ .s1 {
-    margin-left: 0;
+#i1:checked ~ .slider__picture .s1 {
+  margin-left: 0;
 }
 
-#i2:checked ~ .s1 {
-    margin-left: -25%;
+#i1:checked ~ .slider__navigation .d1 {
+  margin-top: 0;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
-#i3:checked ~ .s1 {
-    margin-left: -50%;
+#i2:checked ~ .slider__picture .s1 {
+  margin-left: -25%;
 }
 
-#i4:checked ~ .s1 {
-    margin-left: -75%;
+#i2:checked ~ .slider__navigation .d2 {
+  margin-top: -2.2rem;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
-#i1:checked ~ .d1 {
-    opacity: 1;
+#i3:checked ~ .slider__picture .s1 {
+  margin-left: -50%;
 }
 
-#i2:checked ~ .d1 {
-    opacity: 1;
+#i3:checked ~ .slider__navigation .d3 {
+  margin-top: -4.5rem;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
-#i3:checked ~ .d1 {
-    opacity: 1;
+#i4:checked ~ .slider__picture .s1 {
+  margin-left: -75%;
 }
 
-#i4:checked ~ .d1 {
-    opacity: 1;
+#i4:checked ~ .slider__navigation .d4 {
+  margin-top: -6.8rem;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
