@@ -40,6 +40,18 @@ img {
   align-items: flex-start;
 }
 
+@media screen and (max-width: 480px) {
+  .slider__navigation {
+    flex-flow: column-reverse;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  .slider__descriptions {
+    text-align: center;
+  }
+}
+
 .slider__descriptions {
   display: flex;
   flex-flow: column;
